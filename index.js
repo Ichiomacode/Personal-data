@@ -12,8 +12,13 @@ function updateUTCTime() {
     document.querySelector('[data-testid="currentUTCTime"]').textContent = currentUTCTime;
 }
 
-// Call the functions to update day of the week and UTC time when the page loads
+
+function updateUTCTimeEverySecond() {
+    setInterval(updateUTCTime, 1000); 
+}
+
+
 window.addEventListener('load', () => {
     updateDayOfTheWeek();
-    updateUTCTime();
+    updateUTCTimeEverySecond(); 
 });
