@@ -21,10 +21,16 @@ updateCurrentDayOfTheWeek();
 setInterval(updateCurrentDayOfTheWeek, 86400000);
 
 function updateCurrentLocalTime() {
-    const currentDate = new Date();
-    const milliseconds = currentDate.getMilliseconds(); // Get milliseconds
-    document.querySelector('[data-testid="currentUTCTime"]').textContent = milliseconds.toString().padStart(3, '0'); // Update the displayed milliseconds
+    const utcTimeMilliseconds = Date.now(); // Get current UTC time in milliseconds
+    document.querySelector('[data-testid="currentUTCTime"]').textContent = utcTimeMilliseconds.toString();
 }
+
+// Initial update
+updateCurrentLocalTime();
+
+// Update the current UTC time in milliseconds every second
+setInterval(updateCurrentLocalTime, 1000);
+
 
 // Initial update
 updateCurrentLocalTime();
