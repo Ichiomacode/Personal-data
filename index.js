@@ -25,8 +25,17 @@ function updateCurrentLocalTime() {
     const currentDate = new Date();
     const options = { timeZone: 'Africa/Lagos' }; // Nigeria's time zone
     const localTime = currentDate.toLocaleTimeString('en-US', options);
-    document.querySelector('[data-testid="currentUTCTime"]').textContent = localTime; // Update the displayed local time
+    const milliseconds = currentDate.getMilliseconds(); // Get milliseconds
+    const formattedTime = `${localTime}.${milliseconds.toString().padStart(3, '0')}`; // Format the time with milliseconds
+    document.querySelector('[data-testid="currentUTCTime"]').textContent = formattedTime; // Update the displayed time
 }
+
+// Initial update
+updateCurrentLocalTime();
+
+// Update the current local time every millisecond (if you want to display milliseconds)
+setInterval(updateCurrentLocalTime, 1);
+
 
 // Initial update
 updateCurrentLocalTime();
