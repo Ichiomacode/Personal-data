@@ -1,69 +1,36 @@
-/* Reset some default styles */
-body, h1, h2, h3, p {
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*{
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+.container{
+    text-align: center;
 }
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
+.about{
+    text-align: center;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    text-align: center; 
 }
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-[data-testid="slackUserName"] {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-.slack-display-container {
-    width: 100%; 
+.about img{
+    width: 20%;
+    border: 8px solid red;
+    border-radius: 50%;
+    margin-top: 20px;
 }
 
-[data-testid="slackDisplayImage"] {
-    max-width: 300px; /* Adjust the maximum width to your desired size */
-    height: auto; 
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
+.track{
+    margin: 20px 0 30px 0;
 }
 
-[data-testid="currentDayOfTheWeek"] {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-[data-testid="currentUTCTime"] {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-[data-testid="myTrack"] {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-[data-testid="githubURL"] {
-    font-size: 16px;
-    color: #007BFF;
+a{
+    background-color: rgb(234, 104, 104);
+    padding: 10px 16px;
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-[data-testid="githubURL"]:hover {
-    color: #0056b3;
+    color: white;
+    border-radius: 8px;
 }

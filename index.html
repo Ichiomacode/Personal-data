@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Data Showcase</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="icon" href="./image/Slack display-pics.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+    <title>HNG Frontend Stage One</title>
 </head>
 <body>
     <div class="container">
-            <p data-testid="slackUserName">Faustina Onoriode</p>
-
-        <!-- Slack Display Picture -->
-        <p>
-            <img class="display-pics" src="./Slack display-pics.jpg" alt="Faustina Onoriode" data-testid="slackDisplayImage">
-        </p>
-
-        <!-- Current Day of the Week -->
-        <p>
-            <h3 data-testid="currentDayOfTheWeek">Loading...</h3>
-        </p>
-
-        <!-- Current UTC Time -->
-
-            <h3 data-testid="currentUTCTime">Loading...</h3>
-
-        <!-- Track -->
-            <p data-testid="myTrack">Frontend</p>
-         <!-- GitHub URL -->
-        <p><a href="https://github.com/Ichiomacode/Personal-data" target="_blank" data-testid="githubURL">GitHub Url</a></p>
+        <div class="about">
+            <h1 data-testid="slackUserName">Faustina Onoriode</h1>
+            <img src="https://ca.slack-edge.com/T05FFAA91JP-U05RRGY8RLZ-c7987dcd9259-72" alt="Faustina" data-testid="slackDisplayImage">
+        </div>
+        
+        <div class="daytime">
+            <h2 data-testid="currentDayOfTheWeek"></h2>
+            <h3 data-testid="currentUTCTime"></h3>
         </div>
 
-    <script src="./index.js"></script>
+        <div class="track">
+            <h3 data-testid="myTrack">Frontend</h3>
+        </div>
+        
+        <a href="https://github.com/Ichiomacode/Personal-data" target="_blank" data-testid=“githubURL”>Github Url</a>
+
+    </div>
+
+
+
 </body>
 </html>
