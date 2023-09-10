@@ -33,7 +33,4 @@ setInterval(updateCurrentLocalTime, 1000);
 
 
 // Initial update
-updateCurrentLocalTime();
-
-// Update the current milliseconds every second
-setInterval(updateCurrentLocalTime, 1000);
+updateCurrentLocalTime()
